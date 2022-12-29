@@ -1,0 +1,230 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ParseXaml" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sx="clr-namespace:System.Xml;assembly=System.Private.Xml" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_XamlContents" Type="InArgument(x:String)" />
+    <x:Property Name="out_XamlDocument" Type="OutArgument(sx:XmlDocument)" />
+    <x:Property Name="out_NamespaceManager" Type="OutArgument(sx:XmlNamespaceManager)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>1800.6666666666667,2503.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Xml.XPath</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="76">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Private.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xml.XPath.XDocument</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ParseXaml" sap:VirtualizedContainerService.HintSize="496,2438.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:MultipleAssign DisplayName="Initialize" sap:VirtualizedContainerService.HintSize="434,140" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="sx:XmlDocument">
+                <CSharpReference x:TypeArguments="sx:XmlDocument" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">out_XamlDocument</CSharpReference>
+              </OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="sx:XmlDocument">
+                <CSharpValue x:TypeArguments="sx:XmlDocument" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">new XmlDocument()</CSharpValue>
+              </InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="sx:XmlNamespaceManager">
+                <CSharpReference x:TypeArguments="sx:XmlNamespaceManager" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">out_NamespaceManager</CSharpReference>
+              </OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="sx:XmlNamespaceManager">
+                <CSharpValue x:TypeArguments="sx:XmlNamespaceManager" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">new XmlNamespaceManager(out_XamlDocument.NameTable)</CSharpValue>
+              </InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+    </ui:MultipleAssign>
+    <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="434,147.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" MethodName="LoadXml">
+      <InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="sx:XmlDocument">
+          <CSharpValue x:TypeArguments="sx:XmlDocument" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">out_XamlDocument</CSharpValue>
+        </InArgument>
+      </InvokeMethod.TargetObject>
+      <InArgument x:TypeArguments="x:String">
+        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">in_XamlContents</CSharpValue>
+      </InArgument>
+    </InvokeMethod>
+    <InvokeMethod sap2010:Annotation.AnnotationText="The default namespace needs to be specified for later usage in XPath queries: https://docs.microsoft.com/en-us/dotnet/standard/data/xml/xpath-queries-and-namespaces#the-default-namespace&#xA;&#xA;In this case, the default namespace can be referenced by the prefix &quot;xaml&quot;." DisplayName="Invoke method AddNamespace (default)" sap:VirtualizedContainerService.HintSize="434,326" sap2010:WorkflowViewState.IdRef="InvokeMethod_2" MethodName="AddNamespace">
+      <InvokeMethod.TargetObject>
+        <InArgument x:TypeArguments="sx:XmlNamespaceManager">
+          <CSharpValue x:TypeArguments="sx:XmlNamespaceManager" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">out_NamespaceManager</CSharpValue>
+        </InArgument>
+      </InvokeMethod.TargetObject>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <InArgument x:TypeArguments="x:String">xaml</InArgument>
+      <InArgument x:TypeArguments="x:String">http://schemas.microsoft.com/netfx/2009/xaml/activities</InArgument>
+    </InvokeMethod>
+    <Sequence sap2010:Annotation.AnnotationText="These namespaces are explicitly added to prevent errors when a particular check searches for elements in a namespace, but one of the workflows checked does not declare that namespace." DisplayName="Add commonly used namespaces" sap:VirtualizedContainerService.HintSize="434,992" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <InvokeMethod sap2010:Annotation.AnnotationText="Add the commonly used UI namespace: &#xA;xmlns:ui=&quot;http://schemas.uipath.com/workflow/activities&quot;" DisplayName="Invoke method AddNamespace (UI)" sap:VirtualizedContainerService.HintSize="338,242.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" MethodName="AddNamespace">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sx:XmlNamespaceManager">
+            <CSharpValue x:TypeArguments="sx:XmlNamespaceManager" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">out_NamespaceManager</CSharpValue>
+          </InArgument>
+        </InvokeMethod.TargetObject>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <InArgument x:TypeArguments="x:String">ui</InArgument>
+        <InArgument x:TypeArguments="x:String">http://schemas.uipath.com/workflow/activities</InArgument>
+      </InvokeMethod>
+      <InvokeMethod sap2010:Annotation.AnnotationText="Add the commonly used SAP namespace: &#xA;xmlns:sap2010=&quot;http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation&quot;" DisplayName="Invoke method AddNamespace (SAP2010)" sap:VirtualizedContainerService.HintSize="338,242.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeMethod_4" MethodName="AddNamespace">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sx:XmlNamespaceManager">
+            <CSharpValue x:TypeArguments="sx:XmlNamespaceManager" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">out_NamespaceManager</CSharpValue>
+          </InArgument>
+        </InvokeMethod.TargetObject>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <InArgument x:TypeArguments="x:String">sap2010</InArgument>
+        <InArgument x:TypeArguments="x:String">http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation</InArgument>
+      </InvokeMethod>
+      <InvokeMethod sap2010:Annotation.AnnotationText="Add the commonly used UFA (UiPath Form Activities) namespace: &#xA;xmlns:ufa=&quot;clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities&quot;" DisplayName="Invoke method AddNamespace (UFA)" sap:VirtualizedContainerService.HintSize="338,242.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeMethod_5" MethodName="AddNamespace">
+        <InvokeMethod.TargetObject>
+          <InArgument x:TypeArguments="sx:XmlNamespaceManager">
+            <CSharpValue x:TypeArguments="sx:XmlNamespaceManager" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">out_NamespaceManager</CSharpValue>
+          </InArgument>
+        </InvokeMethod.TargetObject>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <InArgument x:TypeArguments="x:String">ufa</InArgument>
+        <InArgument x:TypeArguments="x:String">clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities</InArgument>
+      </InvokeMethod>
+    </Sequence>
+    <ui:ForEach x:TypeArguments="sx:XmlAttribute" CurrentIndex="{x:Null}" DisplayName="For Each Root Attribute" sap:VirtualizedContainerService.HintSize="434,551.3333333333334" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="sx:XmlAttribute">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sx:XmlAttribute" Name="Attribute" />
+          </ActivityAction.Argument>
+          <If DisplayName="Namespace attribute?" sap:VirtualizedContainerService.HintSize="334,413.3333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+            <If.Condition>
+              <InArgument x:TypeArguments="x:Boolean">
+                <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">Attribute.Name.StartsWith("xmlns:")</CSharpValue>
+              </InArgument>
+            </If.Condition>
+            <If.Then>
+              <InvokeMethod DisplayName="Invoke Method" sap:VirtualizedContainerService.HintSize="237.33333333333334,144" sap2010:WorkflowViewState.IdRef="InvokeMethod_6" MethodName="AddNamespace">
+                <InvokeMethod.TargetObject>
+                  <InArgument x:TypeArguments="sx:XmlNamespaceManager">
+                    <CSharpValue x:TypeArguments="sx:XmlNamespaceManager" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">out_NamespaceManager</CSharpValue>
+                  </InArgument>
+                </InvokeMethod.TargetObject>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">Attribute.Name.Substring(Attribute.Name.IndexOf(":")+1)</CSharpValue>
+                </InArgument>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">Attribute.Value</CSharpValue>
+                </InArgument>
+              </InvokeMethod>
+            </If.Then>
+          </If>
+        </ActivityAction>
+      </ui:ForEach.Body>
+      <ui:ForEach.Values>
+        <InArgument x:TypeArguments="sc:IEnumerable">
+          <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">out_XamlDocument.DocumentElement.Attributes</CSharpValue>
+        </InArgument>
+      </ui:ForEach.Values>
+    </ui:ForEach>
+  </Sequence>
+</Activity>

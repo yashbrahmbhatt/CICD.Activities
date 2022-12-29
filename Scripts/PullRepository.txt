@@ -1,0 +1,4 @@
+﻿cd "{RepositoryDirectory}"
+git init
+git remote add origin "{RepositoryURL}"
+git pull origin {BranchName} --quiet
